@@ -1,0 +1,29 @@
+{
+	"name": "scout-gateway",
+	"private": true,
+	"version": "0.1.0",
+	"license": "MIT",
+	"workspaces": [
+		"packages/api"
+	],
+	"scripts": {
+		"prepare": "husky install",
+		"build": "npm run build --workspace=packages/api",
+		"start": "npm run start --workspace=packages/api",
+		"dev": "npm run dev --workspace=packages/api",
+		"test": "npm run test --workspace=packages/api",
+		"type-check": "npm run type-check --workspace=packages/api",
+		"lint": "eslint .",
+		"lint:fix": "eslint --fix .",
+		"format": "prettier --check .",
+		"format:fix": "prettier --write ."
+	},
+	"devDependencies": {
+		"@trivago/prettier-plugin-sort-imports": "^4.2.0",
+		"@typescript-eslint/eslint-plugin": "^6.3.0",
+		"@typescript-eslint/parser": "^6.3.0",
+		"eslint": "^8.46.0",
+		"husky": "^8.0.3",
+		"prettier": "^3.0.0"
+	}
+}

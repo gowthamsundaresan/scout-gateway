@@ -1,0 +1,32 @@
+{
+	"name": "@scout/gateway-api",
+	"version": "0.1.0",
+	"description": "Scout Gateway API",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"build": "tsc",
+		"start": "tsx ./src/index.ts",
+		"dev": "tsx watch --clear-screen=false ./src/index.ts",
+		"test": "vitest run --passWithNoTests --testTimeout=60000",
+		"lint": "eslint src/**/*.ts",
+		"type-check": "tsc --noEmit"
+	},
+	"dependencies": {
+		"@fastify/env": "^4.4.0",
+		"@fastify/jwt": "^8.0.1",
+		"@fastify/rate-limit": "^9.1.0",
+		"dotenv": "^16.4.5",
+		"fastify": "^4.26.2",
+		"fastify-plugin": "^5.0.1",
+		"mongoose": "^8.0.0",
+		"postmark": "^4.0.5"
+	},
+	"devDependencies": {
+		"@types/node": "^20.11.24",
+		"mongodb-memory-server": "^10.2.0",
+		"tsx": "^4.7.1",
+		"typescript": "^5.3.3",
+		"vitest": "^3.2.4"
+	}
+}

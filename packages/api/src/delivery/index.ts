@@ -18,7 +18,7 @@ export async function deliver(
 		case 'email':
 			return sendEmail(rendered.title, rendered.body, replyToken)
 		case 'tg':
-			return sendTelegram(rendered.title, rendered.body)
+			return sendTelegram(rendered.title, rendered.body, replyToken)
 		default:
 			throw new Errors.ERR_CHANNEL_NOT_CONFIGURED()
 	}

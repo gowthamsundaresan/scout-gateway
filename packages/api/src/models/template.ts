@@ -2,7 +2,7 @@ import mongoose from 'mongoose'
 
 // --- Types & state ---
 
-export type Channel = 'email' | 'tg'
+export type Channel = 'email' | 'tg' | 'web'
 
 export interface ITemplate {
 	templateId: string
@@ -18,7 +18,7 @@ const TemplateSchema = new mongoose.Schema<ITemplate>(
 	{
 		templateId: { type: String, required: true, unique: true, trim: true },
 		name: { type: String, required: true, trim: true },
-		channel: { type: String, required: true, enum: ['email', 'tg'] },
+		channel: { type: String, required: true, enum: ['email', 'tg', 'web'] },
 		title: { type: String, default: '' },
 		body: { type: String, required: true }
 	},

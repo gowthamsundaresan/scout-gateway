@@ -5,6 +5,7 @@ import mongoose, { type HydratedDocument } from 'mongoose'
 export interface IClientScope {
 	send: boolean
 	receive: boolean
+	read: boolean
 }
 
 export interface IClient {
@@ -26,7 +27,8 @@ const ClientSchema = new mongoose.Schema<IClient>(
 		name: { type: String, required: true, trim: true },
 		scope: {
 			send: { type: Boolean, default: false },
-			receive: { type: Boolean, default: false }
+			receive: { type: Boolean, default: false },
+			read: { type: Boolean, default: false }
 		},
 		receiveUrl: {
 			type: String,

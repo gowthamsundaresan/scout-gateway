@@ -43,6 +43,7 @@ const errorConfig = {
 	ERR_FORBIDDEN_SCOPE: ['forbidden', 'Client is not authorized for this action'],
 	ERR_CLIENT_NOT_FOUND: ['not_found', 'Client not found'],
 	ERR_TEMPLATE_NOT_FOUND: ['not_found', 'Template not found'],
+	ERR_MESSAGE_NOT_FOUND: ['not_found', 'Message not found'],
 	ERR_RECEIVE_URL_REQUIRED: ['bad_request', 'receiveUrl is required when receive scope is enabled'],
 	ERR_CHANNEL_NOT_CONFIGURED: ['configuration_error', 'Delivery channel is not configured'],
 	ERR_DELIVERY_FAILED: ['internal_server_error', 'Failed to deliver message']

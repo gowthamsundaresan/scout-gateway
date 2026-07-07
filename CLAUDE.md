@@ -55,7 +55,8 @@ npm run format:fix
 ## Invariants
 
 - The admin plane (`/register`, `/unregister`, `/templates`) is gated by `X-API-Key` only.
-- Traffic (`/send`, `/receive`) is gated by a per-client JWT; `scope.send` is required to publish.
+- Traffic (`/send`, `/receive`) is gated by a per-client JWT; `scope.send` is required to publish,
+  `scope.read` for `GET /messages*`.
 - `scope.receive` clients must have a `receiveUrl`; forwarded POSTs are HMAC-signed with `FORWARD_SECRET`.
 - Re-registering a client bumps `tokenVersion`, invalidating its old JWT.
 - Delivery addresses come from env (`EMAIL_TO`, `TELEGRAM_CHAT_ID`), never from the request.

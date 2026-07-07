@@ -19,6 +19,9 @@ export async function deliver(
 			return sendEmail(rendered.title, rendered.body, replyToken)
 		case 'tg':
 			return sendTelegram(rendered.title, rendered.body, replyToken)
+		case 'web':
+			// Stored-only channel: the dashboard reads messages via GET /messages
+			return
 		default:
 			throw new Errors.ERR_CHANNEL_NOT_CONFIGURED()
 	}

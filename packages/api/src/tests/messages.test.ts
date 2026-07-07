@@ -1,8 +1,7 @@
+import type { FastifyInstance } from 'fastify'
 import { MongoMemoryServer } from 'mongodb-memory-server'
 import mongoose from 'mongoose'
 import { afterAll, beforeAll, describe, expect, it } from 'vitest'
-
-import type { FastifyInstance } from 'fastify'
 
 import { buildServer } from '../app'
 import { Client, Message, Template } from '../models'

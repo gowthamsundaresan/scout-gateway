@@ -26,17 +26,17 @@ an agent that publishes digests registers with `send`; a dashboard registers wit
 
 ## Endpoints
 
-| Method | Path          | Auth          | Purpose                                            |
-| ------ | ------------- | ------------- | -------------------------------------------------- |
-| POST   | `/register`   | `X-API-Key`   | Create/update a client, (re)issue its JWT          |
-| POST   | `/unregister` | `X-API-Key`   | Deactivate a client and invalidate its JWT         |
-| POST   | `/templates`  | `X-API-Key`   | Create/update a delivery template                  |
-| GET    | `/templates`  | `X-API-Key`   | List templates                                     |
-| POST   | `/send`       | Bearer (send) | Render a template, deliver to human, store message |
-| POST   | `/receive`    | Bearer (send) | Store an inbound message, forward to its receivers |
-| GET    | `/messages`   | Bearer (read) | List stored messages (filters + cursor, newest first) |
-| GET    | `/messages/:messageId/thread` | Bearer (read) | A message plus its inbound replies |
-| GET    | `/health`     | none          | Liveness                                           |
+| Method | Path                          | Auth          | Purpose                                               |
+| ------ | ----------------------------- | ------------- | ----------------------------------------------------- |
+| POST   | `/register`                   | `X-API-Key`   | Create/update a client, (re)issue its JWT             |
+| POST   | `/unregister`                 | `X-API-Key`   | Deactivate a client and invalidate its JWT            |
+| POST   | `/templates`                  | `X-API-Key`   | Create/update a delivery template                     |
+| GET    | `/templates`                  | `X-API-Key`   | List templates                                        |
+| POST   | `/send`                       | Bearer (send) | Render a template, deliver to human, store message    |
+| POST   | `/receive`                    | Bearer (send) | Store an inbound message, forward to its receivers    |
+| GET    | `/messages`                   | Bearer (read) | List stored messages (filters + cursor, newest first) |
+| GET    | `/messages/:messageId/thread` | Bearer (read) | A message plus its inbound replies                    |
+| GET    | `/health`                     | none          | Liveness                                              |
 
 `intent`: `0` = recommendation, `1` = anti-recommendation.
 
